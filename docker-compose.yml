@@ -1,0 +1,28 @@
+version: '3.5'
+
+services:
+      
+  localstack:
+    container_name: localstack
+    healthcheck:
+      test: ["CMD-SHELL", "/health-check-scripts/aws-services-healthcheck.sh || exit 1"]
+    image: localstack/localstack:0.11.2
+    ports:
+      - '4569:4569' # DynamoDB
+      - '8055:8080' # Localstack UI
+    environment:
+      - SERVICES=dynamodb
+      - DATA_DIR=/tmp/localstack/data
+      - AWS_DEFAULT_REGION=sa-east-1
+      - DEBUG=1
+      - USE_SSL=0
+      - AWS_CBOR_DISABLE=1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - HOSTNAME=localstack
+    volumes:
+      - "./src/main/resources/aws/services:/docker-entrypoint-initaws.d"
+      - "./src/main/resources/aws/healthcheck:/health-check-scripts"
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      
+
+volumes:

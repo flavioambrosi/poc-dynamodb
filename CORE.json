@@ -1,0 +1,489 @@
+{
+  "ModelName": "CORE",
+  "ModelMetadata": {
+    "Author": "",
+    "DateCreated": "Feb 07, 2022, 04:39 PM",
+    "DateLastModified": "Feb 16, 2022, 08:02 PM",
+    "Description": "",
+    "AWSService": "Amazon DynamoDB",
+    "Version": "3.0"
+  },
+  "DataModel": [
+    {
+      "TableName": "core",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "PK",
+          "AttributeType": "S"
+        },
+        "SortKey": {
+          "AttributeName": "SK",
+          "AttributeType": "S"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "GSI1_PK",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "GSI1_SK",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "GSI2_PK",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "GSI2_SK",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "entidade",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "operacao",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "data",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "valor",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "moeda",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "codigoServico",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "nome",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "detalhe",
+          "AttributeType": "M"
+        },
+        {
+          "AttributeName": "cartaoTokenizado",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "endereço",
+          "AttributeType": "M"
+        },
+        {
+          "AttributeName": "mensagemEnvio",
+          "AttributeType": "M"
+        },
+        {
+          "AttributeName": "mensagemRetorno",
+          "AttributeType": "M"
+        },
+        {
+          "AttributeName": "emissor",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "operacaoContabilizada",
+          "AttributeType": "BOOL"
+        },
+        {
+          "AttributeName": "idTransacaoBandeira",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "codigoAprovacao",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "codigoErro",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "bandeira",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "situacao",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "numeroTransacao",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "id",
+          "AttributeType": "S"
+        }
+      ],
+      "GlobalSecondaryIndexes": [
+        {
+          "IndexName": "GSI1",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "GSI1_PK",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "GSI1_SK",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        },
+        {
+          "IndexName": "GSI2",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "GSI2_PK",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "GSI2_SK",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        }
+      ],
+      "TableData": [
+        {
+          "PK": {
+            "S": "TRXID#8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "SK": {
+            "S": "TRXID#8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "GSI1_PK": {
+            "S": "PARCEIRO#whatsapp"
+          },
+          "GSI1_SK": {
+            "S": "PULL_DONE"
+          },
+          "GSI2_PK": {
+            "S": "externalTransferId#787768"
+          },
+          "GSI2_SK": {
+            "S": "TRXID#8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "entidade": {
+            "S": "Transacao"
+          },
+          "data": {
+            "S": "2022-02-02T15:08:41.016"
+          },
+          "valor": {
+            "N": "24.93"
+          },
+          "moeda": {
+            "S": "BRL"
+          },
+          "codigoServico": {
+            "S": "PP"
+          },
+          "situacao": {
+            "S": "PULL_DONE"
+          },
+          "numeroTransacao": {
+            "S": "8d722f9d-aded-422e-a8b2-adee0115efa3"
+          }
+        },
+        {
+          "PK": {
+            "S": "TRXID#8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "SK": {
+            "S": "PARCEIRO#whatsapp"
+          },
+          "GSI1_PK": {
+            "S": "PARCEIRO#whatsapp"
+          },
+          "GSI1_SK": {
+            "S": "2022-02-02T15:08:41.633"
+          },
+          "GSI2_PK": {
+            "S": "PARCEIRO#whatsapp"
+          },
+          "GSI2_SK": {
+            "S": "TRXID#8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "entidade": {
+            "S": "Parceiro"
+          },
+          "data": {
+            "S": "2022-02-02T15:08:41.633"
+          },
+          "nome": {
+            "S": "Facebook Meta Whatsapp"
+          },
+          "numeroTransacao": {
+            "S": "8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "id": {
+            "S": "whatsapp"
+          }
+        },
+        {
+          "PK": {
+            "S": "TRXID#8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "SK": {
+            "S": "PAGADOR#1230061036025452"
+          },
+          "entidade": {
+            "S": "Pagador"
+          },
+          "data": {
+            "S": "2022-02-02T15:08:42.142"
+          },
+          "nome": {
+            "S": "Sanchez quinttt"
+          },
+          "cartaoTokenizado": {
+            "S": "1230061036025452"
+          },
+          "emissor": {
+            "S": "Santander"
+          },
+          "bandeira": {
+            "S": "VISA"
+          },
+          "numeroTransacao": {
+            "S": "8d722f9d-aded-422e-a8b2-adee0115efa3"
+          }
+        },
+        {
+          "PK": {
+            "S": "TRXID#8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "SK": {
+            "S": "BID#1234567890"
+          },
+          "GSI1_PK": {
+            "S": "BID#1234567890"
+          },
+          "GSI1_SK": {
+            "S": "Santander"
+          },
+          "entidade": {
+            "S": "TransacaoBandeira"
+          },
+          "operacao": {
+            "S": "PULL"
+          },
+          "data": {
+            "S": "2022-02-02T15:08:44.612"
+          },
+          "emissor": {
+            "S": "Santander"
+          },
+          "operacaoContabilizada": {
+            "BOOL": false
+          },
+          "idTransacaoBandeira": {
+            "S": "1234567890"
+          },
+          "codigoAprovacao": {
+            "S": "98765X"
+          },
+          "bandeira": {
+            "S": "VISA"
+          },
+          "numeroTransacao": {
+            "S": "8d722f9d-aded-422e-a8b2-adee0115efa3"
+          }
+        },
+        {
+          "PK": {
+            "S": "TRXID#8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "SK": {
+            "S": "RECEBEDOR#10#1230061036025452"
+          },
+          "entidade": {
+            "S": "Recebedor"
+          },
+          "data": {
+            "S": "2022-02-02T15:08:42.142"
+          },
+          "nome": {
+            "S": "Ingo"
+          },
+          "cartaoTokenizado": {
+            "S": "1230061036666666"
+          },
+          "emissor": {
+            "S": "Bradesco"
+          },
+          "bandeira": {
+            "S": "MASTERCARD"
+          },
+          "numeroTransacao": {
+            "S": "8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "id": {
+            "S": "xpto123"
+          }
+        },
+        {
+          "PK": {
+            "S": "TRXID#8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "SK": {
+            "S": "BID#1234567891"
+          },
+          "GSI1_PK": {
+            "S": "BID#1234567891"
+          },
+          "GSI1_SK": {
+            "S": "Bradesco"
+          },
+          "entidade": {
+            "S": "TransacaoBandeira"
+          },
+          "operacao": {
+            "S": "PUSH"
+          },
+          "data": {
+            "S": "2022-02-02T15:08:42.142"
+          },
+          "emissor": {
+            "S": "Bradesco"
+          },
+          "operacaoContabilizada": {
+            "BOOL": false
+          },
+          "idTransacaoBandeira": {
+            "S": "1234567891"
+          },
+          "codigoAprovacao": {
+            "S": "98765Y"
+          },
+          "bandeira": {
+            "S": "MASTERCARD"
+          },
+          "numeroTransacao": {
+            "S": "8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "id": {
+            "S": "xpto123"
+          }
+        },
+        {
+          "PK": {
+            "S": "TRXID#8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "SK": {
+            "S": "RECEBEDOR#8#1230061036025452"
+          },
+          "entidade": {
+            "S": "Recebedor"
+          },
+          "data": {
+            "S": "2022-02-02T15:08:42.142"
+          },
+          "nome": {
+            "S": "Ingo"
+          },
+          "cartaoTokenizado": {
+            "S": "1230061036666666"
+          },
+          "emissor": {
+            "S": "Bradesco"
+          },
+          "bandeira": {
+            "S": "MASTERCARD"
+          },
+          "numeroTransacao": {
+            "S": "8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "id": {
+            "S": "abc1234"
+          }
+        },
+        {
+          "PK": {
+            "S": "TRXID#8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "SK": {
+            "S": "BID#ERRO#9"
+          },
+          "GSI1_PK": {
+            "S": "BID#ERRO#9"
+          },
+          "GSI1_SK": {
+            "S": "Bradesco"
+          },
+          "entidade": {
+            "S": "TransacaoBandeira"
+          },
+          "operacao": {
+            "S": "PUSH"
+          },
+          "data": {
+            "S": "2022-02-02T15:08:42.142"
+          },
+          "emissor": {
+            "S": "Bradesco"
+          },
+          "operacaoContabilizada": {
+            "BOOL": false
+          },
+          "codigoErro": {
+            "S": "99"
+          },
+          "bandeira": {
+            "S": "MASTERCARD"
+          },
+          "numeroTransacao": {
+            "S": "8d722f9d-aded-422e-a8b2-adee0115efa3"
+          },
+          "id": {
+            "S": "abc1234"
+          }
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    }
+  ]
+}
